@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chase McKenzie — Project Store</title>
+<meta name="description" content="Everything I've built, laid out like a store page. Web apps, Chrome extensions, games and SaaS.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕹️</text></svg>">
+<link rel="stylesheet" href="css/steam.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">C</span> CHASE</a>
+    <nav class="mainnav">
+      <a href="index.html" class="on">Store</a>
+      <a href="#catalog">Catalog</a>
+      <a href="https://github.com/chaseMckenzie88" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="topbar-right">
+      <span id="count-badge" style="font-size:12px;color:#8f98a0"></span>
+    </div>
+  </div>
+</header>
+
+<div class="storebar">
+  <div class="wrap">
+    <span class="crumb">All Projects</span>
+    <div class="searchbox">
+      <input id="q" type="search" placeholder="search the store" autocomplete="off">
+      <span class="ico">🔍</span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="section-h">
+      <h2>Featured &amp; Recommended</h2>
+    </div>
+    <div class="feature" id="feature">
+      <div class="feature-track" id="feature-track"></div>
+      <button class="feature-nav prev" id="f-prev" aria-label="Previous">‹</button>
+      <button class="feature-nav next" id="f-next" aria-label="Next">›</button>
+    </div>
+    <div class="feature-dots" id="feature-dots"></div>
+  </section>
+
+  <section class="section" id="catalog">
+    <div class="section-h">
+      <h2>Browse by Category</h2>
+      <span class="right" id="result-count"></span>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="rows" id="rows"></div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Built by Chase McKenzie.</span>
+    <span>·</span>
+    <a href="https://github.com/chaseMckenzie88" target="_blank" rel="noopener">github.com/chaseMckenzie88</a>
+    <span style="margin-left:auto">Not affiliated with Valve. Layout is an homage.</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/store.js"></script>
+</body>
+</html>
