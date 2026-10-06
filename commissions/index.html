@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chase: Roblox Commissions</title>
+<meta name="description" content="Roblox R6 animator, scripter and builder taking commissions: combat systems, anime animations, full maps.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--line:#262b35;--ink:#e8eaed;--dim:#9aa3ad;--accent:#ff8a3d;--ok:#4cc38a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 32px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at top,#2a1a10 0%,var(--bg) 70%)}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.05;margin:0 0 12px}
+h1 span{color:var(--accent)}
+.lede{color:var(--dim);font-size:18px;max-width:640px;margin:0 0 24px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ok);margin-bottom:18px}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
+.cta{display:inline-block;background:var(--accent);color:#1a0d04;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;margin-right:10px}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+h2{font-size:26px;margin:0 0 6px}
+.sub{color:var(--dim);margin:0 0 22px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.grid.big{grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+figure img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#000}
+figure.gif img{object-fit:contain}
+figcaption{padding:10px 12px;font-size:14px;color:var(--dim)}
+figcaption b{color:var(--ink);display:block;font-size:15px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.facts span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--dim)}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim);font-weight:600}
+td.p{white-space:nowrap;font-weight:700}
+td.p small{display:block;font-weight:400;color:var(--dim)}
+tr:last-child td{border-bottom:0}
+.tablewrap{overflow-x:auto}
+ol.steps{padding-left:20px;margin:0}
+ol.steps li{margin:0 0 10px}
+.contact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.contact code{background:#000;padding:3px 8px;border-radius:6px;font-size:15px}
+footer{padding:28px 0 48px;color:var(--dim);font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="status" id="status">Taking commissions</div>
+    <h1>Roblox animator, scripter &amp; <span>builder</span>.</h1>
+    <p class="lede">I make anime combat games on Roblox: R6 animations hand-keyed in Blender, server-authoritative combat systems, and whole maps. Everything below is my own work.</p>
+    <a class="cta" href="#contact">Hire me</a>
+    <a class="cta ghost" href="#prices">See prices</a>
+    <div class="facts">
+      <span>R6 animation (Blender → Roblox)</span><span>Luau combat &amp; ability systems</span><span>DataStores</span><span>Part-built maps, no meshes</span><span>Rojo workflow</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="animation">
+  <h2>Animation</h2>
+  <p class="sub">60 fps R6 animations with zero foot slide. Each attack ships with a <code>Hit</code> marker so damage lands on the frame the fist connects.</p>
+  <div class="grid big">
+    <figure class="gif"><img loading="lazy" src="media/dashes.gif" alt="8-way anime dash set"><figcaption><b>8-way anime dashes</b>Full directional set, alternating forward dashes</figcaption></figure>
+    <figure class="gif"><img loading="lazy" src="media/melee.gif" alt="Melee combat set"><figcaption><b>Melee combat set</b>Idle, stance, punch combo with hit markers</figcaption></figure>
+    <figure class="gif"><img loading="lazy" src="media/R6-LocomotionPack.gif" alt="Locomotion pack"><figcaption><b>Locomotion pack</b>Runs, strafes for shift lock, 4-way walks, jumps</figcaption></figure>
+  </div>
+  <div class="grid" style="margin-top:12px">
+    <figure class="gif"><img loading="lazy" src="media/M1_Spin_Kick.gif" alt="Spin kick"><figcaption><b>M1 spin kick</b></figcaption></figure>
+    <figure class="gif"><img loading="lazy" src="media/Dash_Forward_A.gif" alt="Forward dash"><figcaption><b>Forward dash</b></figcaption></figure>
+    <figure class="gif"><img loading="lazy" src="media/Jump_Triple.gif" alt="Triple jump"><figcaption><b>Triple jump</b></figcaption></figure>
+    <figure class="gif"><img loading="lazy" src="media/Combat_Idle.gif" alt="Combat idle"><figcaption><b>Combat stance idle</b></figcaption></figure>
+  </div>
+</section>
+
+<section id="building">
+  <h2>Building</h2>
+  <p class="sub">A complete walled anime ninja village: 553 houses, landmarks, a ring wall with gates, and an HD mode with furnished interiors you can walk into. 100% Parts.</p>
+  <div class="grid big">
+    <figure><img loading="lazy" src="media/01-aerial.jpg" alt="Village aerial"><figcaption><b>Full village, aerial</b>8 districts, 553 houses</figcaption></figure>
+    <figure><img loading="lazy" src="media/05-main-gate.jpg" alt="Main gate"><figcaption><b>Main gate</b></figcaption></figure>
+    <figure><img loading="lazy" src="media/12-hd-houses.jpg" alt="HD houses"><figcaption><b>HD houses</b>Real windows, tiled roofs, balconies</figcaption></figure>
+    <figure><img loading="lazy" src="media/13-interior-kage-office.jpg" alt="Office interior"><figcaption><b>Walk-in interiors</b>Leader's office</figcaption></figure>
+    <figure><img loading="lazy" src="media/14-interior-classroom.jpg" alt="Classroom interior"><figcaption><b>Academy classroom</b></figcaption></figure>
+    <figure><img loading="lazy" src="media/20-lamps-night.jpg" alt="Lanterns at night"><figcaption><b>Lit props</b>Real PointLights</figcaption></figure>
+  </div>
+</section>
+
+<section id="scripting">
+  <h2>Scripting</h2>
+  <p class="sub">I built a full Blox Fruits-style RPG solo, about 20k lines of commented Luau:</p>
+  <ul>
+    <li>Server-authoritative M1 combos, knockback, knockdowns and a dash with i-frames</li>
+    <li>Ability framework on Z X C V F with mastery, plus a gacha scroll roll with rarities</li>
+    <li>Levels, stats, quests with dialogue, 5 combat zones and enemy AI that telegraphs its attacks</li>
+    <li>DataStore saving with schema migration and retries</li>
+    <li>A Skate 3-style skateboard: board physics, flick-it tricks, grinds, manuals</li>
+  </ul>
+  <p class="sub" style="margin-top:14px">I also have two live games on Roblox: a Grow a Garden-style sim and Draw a Pet, where your drawing becomes your pet.</p>
+</section>
+
+<section id="prices">
+  <h2>Prices</h2>
+  <p class="sub">Starting prices. Bigger or rushed jobs are quoted on request. Robux accepted at the rate shown.</p>
+  <div class="tablewrap"><table id="price-table">
+    <thead><tr><th>Job</th><th>What you get</th><th>From</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+</section>
+
+<section id="how">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><b>Message me</b> with what you need, a reference video or picture, and your deadline.</li>
+    <li><b>I quote</b> a fixed price and an ETA. No surprise charges.</li>
+    <li><b>50% up front</b>, the rest when you've seen the finished work. Jobs under $15 are paid in full up front.</li>
+    <li><b>Two rounds of revisions</b> are included. You get the files or the asset, and you can use them in your games forever.</li>
+  </ol>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Hire me</h2>
+    <p class="sub" style="margin-bottom:12px">The fastest way to reach me is Discord.</p>
+    <p>Discord: <code id="discord"></code></p>
+    <p id="roblox-row">Roblox: <a id="roblox" target="_blank" rel="noopener"></a></p>
+    <p>Premade assets: <a href="https://payhip.com/CoolRobloxAssets" target="_blank" rel="noopener">payhip.com/CoolRobloxAssets</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">All work shown is my own. Roblox is a trademark of Roblox Corporation; I'm not affiliated with it.</div></footer>
+
+<script>
+// ---- Edit these ----
+const CONTACT = {
+  discord: "maybe_chase",
+  roblox:  "",                      // full profile URL, or leave "" to hide
+};
+const OPEN = true;                  // false shows "Commissions closed"
+const ROBUX_PER_USD = 1 / 0.0038;   // DevEx rate, so a Robux payment is worth the same to you as dollars
+const PRICES = [
+  ["Single R6 animation", "Combat move, emote, idle or dash. Blender source on request.", 10],
+  ["Animation pack (5)", "Five matching animations, e.g. a full combo or a dash set.", 40],
+  ["Locomotion set", "Idle, walk, run, jump and fall, tuned to your game's speed.", 60],
+  ["Small script", "Shop GUI, door, leaderstats, DataStore saving, round system.", 25],
+  ["Combat system", "M1 combo, hitboxes, block, dash, knockback. Server-authoritative.", 120],
+  ["Ability with VFX", "One move with animation, hitbox, cooldown and effects.", 40],
+  ["Building or prop", "A single detailed model, Part-built and optimized.", 20],
+  ["Full map", "Lobby or open area built to your theme, with lighting.", 150],
+];
+// --------------------
+
+const fmt = n => n.toLocaleString("en-US");
+document.querySelector("#price-table tbody").innerHTML = PRICES.map(([job, what, usd]) =>
+  `<tr><td><b>${job}</b></td><td>${what}</td><td class="p">$${usd}<small>≈ ${fmt(Math.round(usd * ROBUX_PER_USD / 100) * 100)} R$</small></td></tr>`
+).join("");
+document.getElementById("discord").textContent = CONTACT.discord;
+if (CONTACT.roblox) { const a = document.getElementById("roblox"); a.href = CONTACT.roblox; a.textContent = CONTACT.roblox.replace(/^https?:\/\//, ""); }
+else document.getElementById("roblox-row").remove();
+if (!OPEN) { const s = document.getElementById("status"); s.textContent = "Commissions closed"; s.style.color = "#9aa3ad"; }
+</script>
+</body>
+</html>
