@@ -332,8 +332,8 @@ const PROJECTS = [
     released: "2026-08-01",
     status: "In Development",
     priceLabel: "Free to Play",
-    link: "https://github.com/chaseMckenzie88/rblx-game",
-    linkLabel: "View on GitHub",
+    link: "https://payhip.com/CoolRobloxAssets",
+    linkLabel: "Get the assets",
     features: ["Multiplayer", "Controller support", "Server-authoritative", "Saves progress"],
     tech: {
       Language: "Luau",
