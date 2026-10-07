@@ -54,7 +54,7 @@ footer{padding:28px 0 48px;color:var(--dim);font-size:14px}
     <h1>Roblox animator, scripter &amp; <span>builder</span>.</h1>
     <p class="lede">I make anime combat games on Roblox: R6 animations hand-keyed in Blender, server-authoritative combat systems, and whole maps. Everything below is my own work.</p>
     <a class="cta" href="#contact">Hire me</a>
-    <a class="cta ghost" href="#prices">See prices</a>
+    <a class="cta ghost" href="#services">What I can do</a>
     <div class="facts">
       <span>R6 animation (Blender → Roblox)</span><span>Luau combat &amp; ability systems</span><span>DataStores</span><span>Part-built maps, no meshes</span><span>Rojo workflow</span>
     </div>
@@ -112,11 +112,11 @@ footer{padding:28px 0 48px;color:var(--dim);font-size:14px}
   <p>Portfolio: <a href="https://chasemckenzie88.github.io/portfolio/" target="_blank" rel="noopener">chasemckenzie88.github.io/portfolio</a></p>
 </section>
 
-<section id="prices">
-  <h2>Prices</h2>
-  <p class="sub">Starting prices. Bigger or rushed jobs are quoted on request. Robux accepted at the rate shown.</p>
-  <div class="tablewrap"><table id="price-table">
-    <thead><tr><th>Job</th><th>What you get</th><th>From</th></tr></thead>
+<section id="services">
+  <h2>What I can do</h2>
+  <p class="sub">Robux or USD. Message me with what you need and I'll tell you if I can do it, and how long it will take.</p>
+  <div class="tablewrap"><table id="service-table">
+    <thead><tr><th>Job</th><th>What you get</th></tr></thead>
     <tbody></tbody>
   </table></div>
 </section>
@@ -125,8 +125,8 @@ footer{padding:28px 0 48px;color:var(--dim);font-size:14px}
   <h2>How it works</h2>
   <ol class="steps">
     <li><b>Message me</b> with what you need, a reference video or picture, and your deadline.</li>
-    <li><b>I quote</b> a fixed price and an ETA. No surprise charges.</li>
-    <li><b>50% up front</b>, the rest when you've seen the finished work. Jobs under $15 are paid in full up front.</li>
+    <li><b>We agree</b> on exactly what I'll make and when it'll be done.</li>
+    <li><b>I send progress</b> clips as I work, so you see it coming together.</li>
     <li><b>Two rounds of revisions</b> are included. You get the files or the asset, and you can use them in your games forever.</li>
   </ol>
 </section>
@@ -152,22 +152,21 @@ const CONTACT = {
   roblox:  "",                      // full profile URL, or leave "" to hide
 };
 const OPEN = true;                  // false shows "Commissions closed"
-const ROBUX_PER_USD = 1 / 0.0038;   // DevEx rate, so a Robux payment is worth the same to you as dollars
-const PRICES = [
-  ["Single R6 animation", "Combat move, emote, idle or dash. Blender source on request.", 10],
-  ["Animation pack (5)", "Five matching animations, e.g. a full combo or a dash set.", 40],
-  ["Locomotion set", "Idle, walk, run, jump and fall, tuned to your game's speed.", 60],
-  ["Small script", "Shop GUI, door, leaderstats, DataStore saving, round system.", 25],
-  ["Combat system", "M1 combo, hitboxes, block, dash, knockback. Server-authoritative.", 120],
-  ["Ability with VFX", "One move with animation, hitbox, cooldown and effects.", 40],
-  ["Building or prop", "A single detailed model, Part-built and optimized.", 20],
-  ["Full map", "Lobby or open area built to your theme, with lighting.", 150],
+const SERVICES = [
+  ["R6 / R15 animation", "Combat moves, combos, dashes, emotes, idles. Hand-keyed at 60fps in Blender."],
+  ["Locomotion sets", "Idle, walk, run, jump, fall, strafes, tuned to your game's speed."],
+  ["Custom rig animation", "Creatures, NPCs and custom characters, rigged in Blender and animated."],
+  ["Combat systems", "M1 combos, hitboxes, block, dash, knockback, abilities with VFX. Server-authoritative."],
+  ["Simulator & \"Steal a ___\" systems", "Buy/steal/carry, base locks, income, rebirths, index, shops, DataStore saving."],
+  ["Scripts & UI", "Shops, round systems, leaderstats, saving, menus and HUDs."],
+  ["Maps & builds", "Lobbies, arenas, obby stages and whole maps, Part-built or Blender meshes, optimized for mobile."],
+  ["Promo shorts & trailers", "Cinematic in-game camera shots, edited for TikTok, Shorts or your game page."],
+  ["Thumbnails & icons", "Blender-rendered GFX with your characters posed and lit."],
 ];
 // --------------------
 
-const fmt = n => n.toLocaleString("en-US");
-document.querySelector("#price-table tbody").innerHTML = PRICES.map(([job, what, usd]) =>
-  `<tr><td><b>${job}</b></td><td>${what}</td><td class="p">$${usd}<small>≈ ${fmt(Math.round(usd * ROBUX_PER_USD / 100) * 100)} R$</small></td></tr>`
+document.querySelector("#service-table tbody").innerHTML = SERVICES.map(([job, what]) =>
+  `<tr><td><b>${job}</b></td><td>${what}</td></tr>`
 ).join("");
 document.getElementById("discord").textContent = CONTACT.discord;
 if (CONTACT.roblox) { const a = document.getElementById("roblox"); a.href = CONTACT.roblox; a.textContent = CONTACT.roblox.replace(/^https?:\/\//, ""); }
